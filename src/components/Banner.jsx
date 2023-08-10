@@ -55,24 +55,13 @@ const AnimationM = () => {
     setHideM(true);
   };
 
-  React.useEffect(() => {
-    const interval = setInterval(updatePosition, 2000);
-    return () => clearInterval(interval);
-  }, []);
 
-  React.useEffect(() => {
-    setHideM(false);
-    const interval = setTimeout(updateHideM, 1200); 
-    return () => clearTimeout(interval);
-  }, [position]);
+
+
 
   return (
-    <div className="hidden md:block w-1/2 min-h-full">
-      <div
-        className={`${hideM ? 'hidden' : ''}relative text-2xl font-bold ${position.x || 'top-1/2'} ${position.y || 'right-1/2'} ease-in duration-100`}
-      >
-        M
-      </div>
+    <div className="w-1/2 relative min-h-full">
+      {Array.from({length:10}, () => Math.floor(Math.random()* 10)).map((val) => <div className={`text-2xl font-bold top-1/${val} right-1/${Math.floor(Math.random()*10)} ease-in duration-100`}>M{val} </div>)}
     </div>
   );
 };

@@ -1,0 +1,8 @@
+export default [
+    {imgUrl: 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/19818628/2022/9/6/ec27eee6-d613-4423-8e0f-007aea1603c31662468109188Shirts1.jpg', postTitle:'Aerodynamics of a car', userName: 'MotoVlog', datePosted:'Jul 20', readDuration:'6'},
+    {imgUrl: 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/19818628/2022/9/6/ec27eee6-d613-4423-8e0f-007aea1603c31662468109188Shirts1.jpg', postTitle:'Aerodynamics of a car', userName: 'MotoVlog', datePosted:'Jul 22', readDuration:'2'},
+    {imgUrl: 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/19818628/2022/9/6/ec27eee6-d613-4423-8e0f-007aea1603c31662468109188Shirts1.jpg', postTitle:'Aerodynamics of a car', userName: 'MotoVlog', datePosted:'Aug 2', readDuration:'2'},
+    {imgUrl: 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/19818628/2022/9/6/ec27eee6-d613-4423-8e0f-007aea1603c31662468109188Shirts1.jpg', postTitle:'Aerodynamics of a car', userName: 'MotoVlog', datePosted:'Jul 18', readDuration:'2'},
+    {imgUrl: 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/19818628/2022/9/6/ec27eee6-d613-4423-8e0f-007aea1603c31662468109188Shirts1.jpg', postTitle:'Aerodynamics of a car', userName: 'MotoVlog', datePosted:'Jul 06', readDuration:'2'},
+    {imgUrl: 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/19818628/2022/9/6/ec27eee6-d613-4423-8e0f-007aea1603c31662468109188Shirts1.jpg', postTitle:'Aerodynamics of a car', userName: 'MotoVlog', datePosted:'Jul 10', readDuration:'10'},
+]
