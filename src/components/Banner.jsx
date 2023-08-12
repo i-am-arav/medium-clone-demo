@@ -2,11 +2,11 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="bg-[#ffd633] w-full  h-[450px] flex">
-      <div className=" w-full md:w-1/2 flex justify-center items-center pl-10 space-y-5">
+    <div className="bg-[#FFC017] w-full  h-[450px] flex">
+      <div className=" w-full md:w-1/2 flex justify-center items-center px-6 md:pl-10 space-y-5">
         <div className="space-y-8">
-          <h1 className="text-7xl font-serif"> Stay Curious.</h1>
-          <p className="font-serif text-xl">
+          <h1 className="text-[88px] font-serif"> Stay Curious.</h1>
+          <p className="font-sans text-2xl font-light md:font-normal md:text-xl">
             Discover stories, thinking, and expertise from writers on any topic.
           </p>
           <button className="text-white bg-black rounded-full px-6 py-2 mt-2">
