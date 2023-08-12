@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Pill = ({text, textSize = 'sm', textColor='black'}) => {
+const Pill = ({text, className=''}) => {
   return (
-    <div className={`bg-gray-200 px-2 py-[2px] rounded-full text-${textSize} text-${textColor} w-min inline text-center`}>{text}</div>
+    <div className={`bg-[#f2f2f2] border-[#f2f2f2] border-1 px-4 py-2 rounded-full text-center text-sm font-light ${className}`}>{text}</div>
   )
 }
 

@@ -56,9 +56,9 @@ const FeedPost = ({
           <p className="text-sm font-semibold">{name} {domain &&<><span className="text-gray-500">in</span> <span>{domain}</span></>}</p>
         </div>
         <p className="text-2xl font-bold mb-1">{postTitle}</p>
-        <p className="text-ellipsis text-lg text-gray-400  w-3/4 mb-2">{subTitle}</p>
+        <p className="max-h-12 text-gray-400 mb-2 line-clamp-2">{subTitle}</p>
         <div className="flex justify-between">
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 items-center">
             <p className="text-gray-400">{`${datePosted} . ${readDuration} min Read . `}</p>
             {tags.map((tag) => <Pill text={tag} />)}
           </div>

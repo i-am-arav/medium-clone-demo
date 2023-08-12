@@ -14,7 +14,7 @@ const Banner = () => {
           </button>
         </div>
       </div>
-      <AnimationM />
+      {/* <AnimationM /> */}
     </div>
   );
 };

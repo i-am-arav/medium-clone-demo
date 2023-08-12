@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='w-full bg-[#ffd633] py-4  border-b border-black'>
+    <div className='w-full bg-[#ffd633] py-4  border-b border-black px-4'>
     <div className='mx-auto max-w-7xl mt-2         '>
         <div className='flex items-center justify-between'>
             <img src='https://miro.medium.com/max/8978/1*s986xIGqhfsN8U--09_AdA.png'  className='h-10'/>

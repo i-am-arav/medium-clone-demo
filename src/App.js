@@ -3,8 +3,10 @@ import Banner from './components/Banner';
 import TrendingPost from './components/TrendingPost';
 import HomeFeedPosts from './components/HomeFeedPosts';
 import Pill from './components/Pill';
+import Footer from './components/Footer';
+import WebFooter from './components/WebFooter';
 
-const tags =["Saab", "Volvo", "BMW", "Programming", "Social media", "Marketing", "Coding"]
+const tags =["Programming", "Technology", "Data Science", "Artifical Intelligence", "Social media", "Marketing", "Productivity"]
 
 function App() {
   return (
@@ -13,16 +15,18 @@ function App() {
     <Banner/>
     <TrendingPost />
 
-    <div className='grid grid-cols-1 md:grid-cols-6 border-black border-2'>
-      <div className='md:col-span-2 md:col-start-5 border-2 border-red-500'>
-      <div>Discover more of what matters to you</div>
-      <div className='flex space-x-4 flex-wrap'>
-      {tags.map((val,idx) => <Pill text={val} textSize='base' />)}
+    <div className='grid grid-cols-1 md:grid-cols-12 mx-16'>
+      <div className='md:col-span-4 md:col-start-9 '>
+      <div className=''>Discover more of what matters to you</div>
+      <div className='flex flex-wrap pt-4'>
+      {tags.map((val,idx) => <Pill text={val} className='mb-[10px] mr-2' />)}
       </div>
+      <WebFooter />
       </div>
-      <div className='md:col-span-4 md:col-start-1 border-gray-400 border-2'><HomeFeedPosts /></div>
+      <div className='md:col-span-7 md:col-start-1 md:row-start-1'><HomeFeedPosts /></div>
 
     </div>
+    <Footer />
     </div>
 
   );
