@@ -22,7 +22,7 @@ const Header = ({changeToWhiteBg}) => {
                 </div>
             
             </div>
-            <button className={`text-white ease-linear duration-500 ${changeToWhiteBg ? 'bg-[#1b8917]' : 'bg-black'} rounded-full py-2 px-4`}> Get Started </button>
+            <button className={`text-white ease-linear duration-500 ${changeToWhiteBg ? 'bg-[#1b8917]' : 'bg-black'} rounded-full py-2 px-4 mr-2 md:mr-0`}> Get Started </button>
             </div>
             
 

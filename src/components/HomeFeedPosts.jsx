@@ -66,7 +66,7 @@ const FeedPost = ({
         </div>
 
       </div>
-      <img className="h-[100px] w-[100px] md:max-h-[134px] md:max-w-[200] rounded-sm object-cover" src={imgUrl} />
+      <img className="h-[100px] w-[100px]  md:h-[134px] md:w-[200px] rounded-sm object-cover" src={imgUrl} />
 
     </div>
   );
