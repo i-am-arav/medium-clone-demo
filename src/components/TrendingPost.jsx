@@ -3,7 +3,7 @@ import trendingPostData from "../tempUtils/trendingPostData";
 
 const TrendingPost = () => {
   return (
-    <div className="flex flex-col mx-6 pt-10 pb-6 md:mx-16 border-b border-gray-100 mb-4">
+    <div className="flex flex-col mx-6 pt-10 pb-6 px-3 md:mx-16 border-b border-gray-100 mb-4">
       <div><i class="fad fa-analytics mr-2 text-black"></i><p className="font-semibold">Trending on Medium</p></div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-4">
         {trendingPostData.map((post, idx) => (
