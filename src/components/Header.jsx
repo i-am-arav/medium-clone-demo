@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Header = ({changeToWhiteBg}) => {
+const Header = ({changeToWhiteBg, isLoggedIn = true}) => {
   return (
-    <div className={`w-full  py-4  border-b border-black px-4 fixed ${changeToWhiteBg ? 'bg-white' : 'bg-[#FFC017]'} ease-in duration-500`}>
+    isLoggedIn ? (<div className={`w-full  py-4  border-b border-black px-4 fixed ${changeToWhiteBg ? 'bg-white' : 'bg-[#FFC017]'} ease-in duration-500`}>
     <div className='mx-auto max-w-7xl mt-2         '>
         <div className='flex items-center justify-between'>
             <img src='https://miro.medium.com/max/8978/1*s986xIGqhfsN8U--09_AdA.png'  className='h-10'/>
@@ -30,7 +30,7 @@ const Header = ({changeToWhiteBg}) => {
         </div>
 
 
-    </div>
+    </div>): (<div className='w-full'></div>)
   )
 }
 

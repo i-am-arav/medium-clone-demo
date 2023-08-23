@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header'
+import HomePage from './pages/HomePage';
 import LandingPage from './pages/LandingPage';
 
 
@@ -22,8 +23,9 @@ function App() {
   })
   return (
     <div className='m-0 p-0 w-full'>
-    <Header changeToWhiteBg={changeNavColor} />
-    <LandingPage />
+   
+   <HomePage />
+
     
     </div>
 
