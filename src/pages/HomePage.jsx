@@ -12,7 +12,6 @@ const HomePage = () => {
   const fetchSanityData = async () => {
     const res = await fetchPost();
     setPostData(res);
-    console.log('res',res)
   }
 
   React.useEffect(() => {
