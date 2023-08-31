@@ -21,6 +21,18 @@ const transformPost = (posts = []) => {
   })
 }
 
+export const fetchOnePost = async (slug) => {
+  const res = await client.fetch(`*[_type == "post" && slug.current == ${slug}]{
+    title,
+    slug,
+    mainImage{
+      asset->{
+      _id,
+      url
+    }
+  }
+}`);
+}
 
 export const fetchPost = async () => {
     const res = await client.fetch(`*[_type == "post"]{
