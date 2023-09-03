@@ -30,8 +30,9 @@ function App() {
         <Route path='/' element={<LandingPage />} />
         <Route path='/home' element={<HomePage />} />
         <Route path='/new' element = {<NewPost />} />
-        <Route path='/practice' element={<ComponentA />} />
         <Route path='*' element={<h1>404</h1>} />
+        {/*Ignore this route */}
+        <Route path='/practice' element={<ComponentA />} />
  
       </Routes>
    

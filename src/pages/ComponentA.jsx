@@ -1,19 +1,28 @@
-import React, { Component } from 'react'
+import React from 'react'
+import './login.css';
 
-export default class ComponentA extends Component {
-state = {}
+const ComponentA = () => {
+  return (
+    <div className='pageContainer'>
+      <div className='border border-red-400 loginContainer'>
+        <h2 style={{marginBottom:'64px', fontSize:'24px'}}>Create account</h2>
+        <div className='inputContainer'>
+        <label>Email</label>
+        <input />
+        </div>
+        <div className='inputContainer'>
+        <label>Password</label>
+        <input />
+        </div>
 
-  onChange() {
-    console.log('oNChange')
-    console.log(this.state)
-  }
-  
-  render() {
-    return (
-      <div>ComponentA
-
-        <button onClick={this.onChange}>click me</button>
       </div>
-    )
-  }
+      <div className='border border-blue-400'>
+
+      </div>
+
+
+    </div>
+  )
 }
+
+export default ComponentA

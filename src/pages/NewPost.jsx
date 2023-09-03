@@ -1,5 +1,5 @@
 import React from "react";
-import { createPost, fetchCategories } from "../client";
+import { createPost, fetchCategories, uploadImage } from "../client";
 import Pill from "../components/Pill";
 
 const NewPost = () => {
@@ -36,6 +36,21 @@ const NewPost = () => {
       console.log(e);
     }
   };
+
+  const createPostAfterImage = async () => {
+    const imageDoc = await uploadImage(newPost.image);
+    const post = {...newPost};
+    post.image = {
+      _type:'image',
+      asset: {
+        _type: 'reference',
+        _ref: imageDoc?._id
+      }
+    }
+
+    createPost(post)
+    
+  }
 
   React.useEffect(() => {
     getCategories();
@@ -111,7 +126,7 @@ const NewPost = () => {
         onChange={(e) => onChangeofPost("body", e.target.value)}
       />
 
-      <button onClick={() => createPost(newPost)}>Submit</button>
+      <button onClick={() => {createPostAfterImage()}}>Submit</button>
     </div>
   );
 };
