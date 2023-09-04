@@ -5,6 +5,7 @@ import Pill from "../components/Pill";
 const NewPost = () => {
   const [newPost, setNewPost] = React.useState({});
   const [categories, setCategories] = React.useState([]);
+  const [disableButton, setDisableButton] = React.useState(false);
 
   const onChangeofPost = (key, value) => {
     setNewPost((prev) => ({ ...prev, [key]: value }));
@@ -30,7 +31,6 @@ const NewPost = () => {
   const getCategories = async () => {
     try {
       const res = await fetchCategories();
-      console.log(res);
       setCategories(res);
     } catch (e) {
       console.log(e);
@@ -38,6 +38,7 @@ const NewPost = () => {
   };
 
   const createPostAfterImage = async () => {
+    setDisableButton(true);
     const imageDoc = await uploadImage(newPost.image);
     const post = {...newPost};
     post.image = {
@@ -48,7 +49,8 @@ const NewPost = () => {
       }
     }
 
-    createPost(post)
+   await createPost(post);
+   setDisableButton(false);
     
   }
 
@@ -56,9 +58,6 @@ const NewPost = () => {
     getCategories();
   }, []);
 
-  React.useEffect(() => {
-    console.log("newPost", newPost);
-  }, [newPost]);
   //title, subTitle, author, image, categories, publishedAt, body
   return (
     <div className="border border-black flex flex-col space-y-4 px-4 py-2">
@@ -97,9 +96,7 @@ const NewPost = () => {
         type="file"
         name="myImage"
         onChange={(event) => {
-          console.log(JSON.stringify(event.target.files));
           onChangeofPost("image", event.target.files[0]);
-          console.log('image', URL.createObjectURL(event.target.files[0]))
         }}
       />
       <label>Categories</label>
@@ -126,7 +123,7 @@ const NewPost = () => {
         onChange={(e) => onChangeofPost("body", e.target.value)}
       />
 
-      <button onClick={() => {createPostAfterImage()}}>Submit</button>
+      <button className={`bg-green-300 py-4 rounded-lg px-5 ${disableButton && 'bg-red-500'}`} disabled={disableButton} onClick={() => {createPostAfterImage()}}>Submit</button>
     </div>
   );
 };

@@ -16,7 +16,6 @@ const LandingPage = () => {
 
   const getPosts = async () => {
     const result = await fetchPost();
-    console.log('result', result)
     setPosts(result)
   } 
 

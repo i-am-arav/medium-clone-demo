@@ -18,10 +18,6 @@ const HomePage = () => {
     setPostData(res);
   };
 
-  React.useEffect(() => {
-    console.log("PostData", postData);
-  }, [postData]);
-
   const fetchData = () => {
     try {
       setIsLoading(true);
@@ -79,7 +75,7 @@ const HomePage = () => {
           </ul>
           <HomeFeedPosts posts={posts} />
         </div>
-        <div className="overscroll-none  min-h-screen text-black col-span-4 ">
+        <div className="hidden md:block overscroll-none min-h-screen text-black col-span-4 ">
           <div className="flex flex-col px-8 pt-8">
             {/*Staff Picks*/}
             <p className="text-xl">Staff Picks</p>
